@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Scalastyle-maven-plugin : Integrates Scalastyle checker for Scala with maven 3" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Scalastyle-maven-plugin</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/SmartSpike/scalastyle-maven-plugin">Fork Me on GitHub</a>
+
+          <h1 id="project_title">Scalastyle-maven-plugin</h1>
+          <h2 id="project_tagline">Integrates Scalastyle checker for Scala with maven 3</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/SmartSpike/scalastyle-maven-plugin/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/SmartSpike/scalastyle-maven-plugin/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>scalastyle-maven-plugin</h2>
+
+<p>Welcome to the scalastyle-maven-plugin wiki!
+This project is intended to provide maven plugin support  for Scalastyle.
+For more information about Scalastyle, see <a href="https://github.com/scalastyle/scalastyle">https://github.com/scalastyle/scalastyle</a></p>
+
+<h2>Goals Overview</h2>
+
+<ul>
+<li>
+<strong>scalastyle:check</strong> performs a violation check against the scalastyle config file to see if there are any violations.It counts the number of violations found and displays it on the console if verbose is enabled.</li>
+</ul><h2>Usage</h2>
+
+<h3>Check scalacheck violation part of build cycle</h3>
+
+<p>To Configure the Scalastyle Plugin, you need to the add it in the  section of your pom.xml as shown in the sample below. Default phase of execution is <code>process-sources</code> and build will fail if there any voilation</p>
+
+<pre><code>  &lt;build&gt;
+     &lt;plugins&gt; 
+      ...
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.sss.scala-tools&lt;/groupId&gt;
+            &lt;artifactId&gt;scalastyle-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;verbose&gt;true&lt;/verbose&gt;
+                &lt;failOnViolation&gt;true&lt;/failOnViolation&gt;
+                &lt;includeTestSourceDirectory&gt;true&lt;/includeTestSourceDirectory&gt;
+                &lt;failsOnWarning&gt;true&lt;/failsOnWarning&gt;
+                &lt;configLocation&gt;${basedir}/scalastyle_config.xml&lt;/configLocation&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+       ...
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Scalastyle-maven-plugin maintained by <a href="https://github.com/SmartSpike">SmartSpike</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
